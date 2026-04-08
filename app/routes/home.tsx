@@ -1,6 +1,6 @@
 import NavBar from "components/Navbar";
 import type { Route } from "./+types/home";
-import { ArrowRight, Layers } from "lucide-react";
+import { ArrowRight, Clock, Layers } from "lucide-react";
 import Button from "components/ui/Button";
 
 export function meta({}: Route.MetaArgs) {
@@ -67,17 +67,27 @@ export default function Home() {
           </div>
           <div className="projects-grid">
             <div className="project-card group">
-              <div className="preview" />
-              <img
-                src="https://roomify-mlhuk267-dfwu1i.puter.site/projects/1770803585402/rendered.png"
-                alt="Project Preview"
-              />
-              <div className="badge">
-                <span>Community</span>
+              <div className="preview">
+                <img
+                  src="https://roomify-mlhuk267-dfwu1i.puter.site/projects/1770803585402/rendered.png"
+                  alt="Project Preview"
+                />
+                <div className="badge">
+                  <span>Community</span>
+                </div>
               </div>
             </div>
             <div className="card-body">
-              
+              <div>
+                <h3>Project Manhattan</h3>
+                <div className="meta">
+                  <Clock size={12} />
+                  <span>{new Date("01.01.2027").toLocaleDateString()}</span>
+                  <span>
+                    by hammad
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
